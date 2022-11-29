@@ -2796,7 +2796,7 @@ log)
 	view_v2ray_log
 	;;
 url | URL)
-	get_v2ray_vmess_URL_link2
+	get_v2ray_vmess_URL_link_2
 	;;
 u | update)
 	update_v2ray
