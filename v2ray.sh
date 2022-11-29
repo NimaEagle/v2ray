@@ -2299,6 +2299,14 @@ get_v2ray_config_qr_link() {
 	_load qr.sh
 	_qr_create
 }
+
+get_v2ray_vmess_URL_link_2() {
+	create_vmess_URL_config
+	local vmess="vmess://$(cat /etc/v2ray/vmess_qr.json | base64 -w 0)"
+	echo $vmess
+	rm -rf /etc/v2ray/vmess_qr.json
+}
+
 get_v2ray_vmess_URL_link() {
 	create_vmess_URL_config
 	if [[ $v2ray_transport == 33 ]]; then
@@ -2788,7 +2796,7 @@ log)
 	view_v2ray_log
 	;;
 url | URL)
-	get_v2ray_vmess_URL_link
+	get_v2ray_vmess_URL_link2
 	;;
 u | update)
 	update_v2ray
