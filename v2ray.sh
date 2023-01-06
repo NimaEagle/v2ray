@@ -183,7 +183,7 @@ create_vmess_URL_config() {
 		cat >/etc/v2ray/vmess_qr.json <<-EOF
 			{
 				"v": "2",
-				"ps": "233v2.com_${ip}",
+				"ps": "Anonymith",
 				"add": "${ip}",
 				"port": "${v2ray_port}",
 				"id": "${v2ray_id}",
@@ -192,7 +192,8 @@ create_vmess_URL_config() {
 				"type": "${header}",
 				"host": "${host}",
 				"path": "",
-				"tls": ""
+				"tls": "",
+				"scy":"aes-128-gcm"
 			}
 		EOF
 	fi
