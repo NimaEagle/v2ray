@@ -170,7 +170,8 @@ create_vmess_URL_config() {
 				"type": "none",
 				"host": "${domain}",
 				"path": "$_path",
-				"tls": "tls"
+				"tls": "tls",
+				"scy":"aes-128-gcm"
 			}
 		EOF
 	elif [[ $v2ray_transport == 33 ]]; then
